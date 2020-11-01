@@ -120,14 +120,13 @@ body{
 }
 
 .menu{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 img{
-    width: 17em;
+    width: 100%;
     border-radius: 1em 1em 0em 0em;
 }
 
@@ -139,26 +138,22 @@ img{
     padding: 0.3rem;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 0.5em;
     border-radius: 0.1rem;
     position: absolute;
     margin-top: 1em;
-    margin-left: 23em;
+    margin-left: 25em;
 }
 
 .description_resto{
     background-color: #ffffff;
-    width: 17em;
+    width: 100%;
     border-radius: 0em 0em 1em 1em;
-    margin-top: -1em;
+    margin-top: -0.2em;
+    padding: 1.5em 1em 0em 0em;
     box-shadow: 0px 1px 5px #BDBDBD;
-}
-
-.fa-heart{
-    position: absolute;
-    margin-top: -3em;
-    margin-left: 15em;
+    display: flex;
+    justify-content: space-between;
 }
 
 .foot{
@@ -198,6 +193,10 @@ h3{
 h4{
     font-family: 'Shrikhand', cursive;
     padding: 0em 1em 0em 2em;
+}
+
+span{
+    font-weight: 700;
 }
 
 .reserv h2{
@@ -282,7 +281,8 @@ h4{
     border-radius: 1rem;
     box-shadow: 0px 1px 5px #BDBDBD;
     margin: 1em;
-    padding: 0.1em 0.5em 0.1em 0.5em;
+    margin-top: -0.2em;
+    padding: 0.5em;
 }
 
 .menu_check h3{
@@ -299,9 +299,83 @@ h4{
 }
 
 .price{
-    position: absolute;
-    padding-left: 20em;
     margin-top: -2em;
-    font-size: 0.7em;
+    font-size: 0.8em;
     font-weight: 500;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.commander{
+    background-image: linear-gradient(350deg, #9356DC, #FF79DA);
+    width: 14em;
+    align-self: center;
+    border: none;
+    color: #ffffff;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    margin-top: 2em;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 18px #BDBDBD;
+}
+
+
+/* RESPONSIVE */
+
+@media all and (min-width: 800px){
+    body{
+        max-width: 1200px;
+    }
+    
+    .regles{
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .reserv{
+        padding: 6.75em 0em 6.75em 0em;
+        flex: 3;
+    }
+
+    .fonctionnement{
+        max-width: 400px;
+        flex: 2;
+    }
+
+    .fonctionnement p{
+        font-size: 1.1em;
+    }
+
+    .menu{
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        justify-content: center;
+    }
+    
+    img{
+        max-width: 600px;
+        width: auto;
+        flex: 2;
+        border-radius: 1em 0em 0em 1em;
+    }
+
+    .description_resto{
+        flex: 1;
+        border-radius: 0em 1em 1em 0em;
+        max-width: 300px;
+        width: auto;
+    }
+
+    .description_resto p{
+        font-size: 1.5em;
+    }
+
 }

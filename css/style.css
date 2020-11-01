@@ -1,0 +1,307 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
+    padding: 0;
+    background: #EEEEEE;
+    display: flex;
+    flex-direction: column;
+}
+
+.head{
+    width: 80%;
+    background: #ffffff;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 1px 5px #BDBDBD;
+}
+
+.localisation{
+    display: flex;
+    justify-content: center;
+}
+
+.fa-map-marker-alt{
+    padding: 1em;
+}
+
+.reserv{
+    width: 80%;
+    background: #FAFAFA;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em 0em 3em 0em;
+
+}
+
+.explore{
+    background-image: linear-gradient(350deg, #9356DC, #FF79DA);
+    width: 14em;
+    align-self: center;
+    border: none;
+    color: #ffffff;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 18px #BDBDBD;
+}
+
+.fonctionnement{
+    width: 80%;
+    background: #ffffff;
+    margin: auto;
+    padding: 1.5em 0em 3em 0em;
+}
+
+.fonction{
+    background: #F5F5F5;
+    border-radius: 1.5rem;
+    padding: 0.6em;
+    margin: 1em;
+    display: flex;
+    box-shadow: 0px 1px 5px #BDBDBD;
+}
+
+.fonction_color{
+    background: #F3E5F5;
+    border-radius: 1.5rem;
+    padding: 0.6em;
+    margin: 1em;
+    display: flex;
+    box-shadow: 0px 1px 5px #BDBDBD;
+}
+
+.number{
+    background-color: #9356DC;
+    color: #ffffff;
+    text-align: center;
+    width: 1.2em;
+    height: 1.2em;
+    border-radius: 2rem;
+    align-self: center;
+    margin-left: -1.5em;
+    padding: 0.3em;
+    font-weight: 400;
+    font-size: 0.8em;
+}
+
+.fa-mobile-alt, .fa-list{
+    align-self: center;
+    padding: 1.5em;
+    font-size: 0.8em;
+}
+
+.fa-store{
+    align-self: center;
+    padding: 1.5em;
+    font-size: 0.8em;
+    color: #9356DC;
+}
+
+.fonction, p{
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.restaurants{
+    width: 80%;
+    background: #F5F5F5;
+    margin: auto;
+    padding: 1.5em 0em 3em 0em;
+}
+
+.titre{
+    margin-left: 1em;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+}
+
+img{
+    width: 17em;
+    border-radius: 1em 1em 0em 0em;
+}
+
+.new{
+    background-color: #99E2D0;
+    color: green;
+    width: 7em;
+    border: none;
+    padding: 0.3rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.5em;
+    border-radius: 0.1rem;
+    position: absolute;
+    margin-top: 1em;
+    margin-left: 23em;
+}
+
+.description_resto{
+    background-color: #ffffff;
+    width: 17em;
+    border-radius: 0em 0em 1em 1em;
+    margin-top: -1em;
+    box-shadow: 0px 1px 5px #BDBDBD;
+}
+
+.fa-heart{
+    position: absolute;
+    margin-top: -3em;
+    margin-left: 15em;
+}
+
+.foot{
+    width: 80%;
+    background: #212121;
+    margin: auto;
+    color: #ffffff;
+    padding: 1em 0em 2em 0em;
+    font-size: 0.8em;
+    line-height: 0.8em;
+}
+
+.foot_line{
+    display: flex;
+    margin-top: -1.5em;
+}
+
+.fa-utensils, .fa-hands-helping{
+    padding: 0em 1em 0em 0em;
+    margin-top: 0.8em;
+}
+
+/* TXT */
+
+h1{
+}
+
+h2{
+    font-size: 1.1em;
+}
+
+h3{
+    font-size: 1em;
+    margin-left: 1em;
+}
+
+h4{
+    font-family: 'Shrikhand', cursive;
+    padding: 0em 1em 0em 2em;
+}
+
+.reserv h2{
+    text-align: center;
+}
+
+.reserv p{
+    font-size: 0.9em;
+    font-weight: 300;
+    text-align: center;
+}
+
+.fonctionnement h2{
+    margin-left: 1em;
+}
+
+.fonctionnement p{
+    font-weight: 400;
+    margin-top: 1.2em;
+}
+
+.menu p{
+    font-weight: 300;
+    margin-top: -1em;
+    margin-left: 1em;
+}
+
+.foot p{
+    font-size: 0.8em;
+    font-weight: 300;
+    margin-left: 2em;
+    line-height: 0.7em;
+}
+
+
+/* MENU */
+
+.head_menu{
+    width: 80%;
+    background: #ffffff;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.head_menu h1{
+    text-align: center;
+}
+
+.head_menu img{
+    width: 100%;
+    border-radius: 0em 0em 0em 0em;
+}
+
+.contenu_menu{
+    width: 80%;
+    background: #F5F5F5;
+    border-radius: 3em 3em 0em 0em;
+    margin: auto;
+    z-index: 1;
+    margin-top: -3em;
+    padding: 1.5em 0em 3em 0em;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenu_menu h2{
+    font-family: 'Shrikhand', cursive;
+    font-size: 1.3em;
+    padding: 1em;
+    margin-top: -1em;
+}
+
+.contenu_menu h3{
+    font-weight: 300;
+    font-size: 0.9em;
+}
+
+.menu_check{
+    background: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0px 1px 5px #BDBDBD;
+    margin: 1em;
+    padding: 0.1em 0.5em 0.1em 0.5em;
+}
+
+.menu_check h3{
+    font-weight: 400;
+    font-size: 0.8em;
+    margin-left: 0em;
+}
+
+.menu_check p{
+    font-weight: 300;
+    font-size: 0.7em;
+    margin-left: 0em;
+    margin-top: -1em;
+}
+
+.price{
+    position: absolute;
+    padding-left: 20em;
+    margin-top: -2em;
+    font-size: 0.7em;
+    font-weight: 500;
+}

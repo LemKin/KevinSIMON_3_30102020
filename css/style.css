@@ -141,8 +141,8 @@ img{
     font-size: 0.5em;
     border-radius: 0.1rem;
     position: absolute;
-    margin-top: 1em;
-    margin-left: 25em;
+    z-index: 1;
+    margin: 1em 1em 0em 0em;
 }
 
 .description_resto{
@@ -222,6 +222,10 @@ span{
     font-weight: 300;
     margin-top: -1em;
     margin-left: 1em;
+}
+
+a{
+    text-decoration: none;
 }
 
 .foot p{
@@ -326,7 +330,7 @@ span{
 
 /* RESPONSIVE */
 
-@media all and (min-width: 800px){
+@media all and (min-width: 1000px){
     body{
         max-width: 1200px;
     }
@@ -340,7 +344,7 @@ span{
     }
 
     .reserv{
-        padding: 6.75em 0em 6.75em 0em;
+        padding: 6.85em 0em 6.85em 0em;
         flex: 3;
     }
 
@@ -370,12 +374,43 @@ span{
     .description_resto{
         flex: 1;
         border-radius: 0em 1em 1em 0em;
-        max-width: 300px;
         width: auto;
     }
 
     .description_resto p{
         font-size: 1.5em;
+        margin-top: 0.5em;
+    }
+
+    .heart{
+        font-size: 1.5em;
+        align-self: flex-end;
+        margin-bottom: 1em;
+    }
+
+    .contenu_menu{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .menu_check{
+        width: 250px;
+    }
+
+    .entree{
+        display: flex;
+    }
+
+    .plat{
+        display: flex;
+    }
+
+    .dessert{
+        display: flex;
+    }
+
+    .img_menu img{
+        height: 20%;
     }
 
 }

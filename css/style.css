@@ -160,7 +160,7 @@ body{
     color: black;
 }
 
-img{
+.pict_resto{
     width: 100%;
     border-radius: 1em 1em 0em 0em;
 }
@@ -193,6 +193,14 @@ img{
     justify-content: space-between;
 }
 
+span{
+    font-weight: 700;
+}
+
+a{
+    text-decoration: none;
+}
+
 .heart{
     margin-top: 0em;
 }
@@ -208,32 +216,21 @@ img{
 }
 
 .titre_foot{
+    font-size: 1.1em;
     font-family: 'Shrikhand', cursive;
     padding: 0em 1em 0em 2em;
 }
 
-.foot p{
-    font-size: 0.8em;
-    font-weight: 300;
+.txt_foot{
+    font-size: 1em;
+    font-weight: 400;
     margin-left: 2em;
-    line-height: 1.3em;
+    line-height: 1em;
 }
 
 .clic{
     text-decoration: none;
     color: #ffffff;
-}
-
-
-
-/* AUTRES */
-
-span{
-    font-weight: 700;
-}
-
-a{
-    text-decoration: none;
 }
 
 
@@ -253,17 +250,17 @@ a{
     text-align: center;
 }
 
-.head_menu img{
+.pict_menu{
     width: 100%;
-    border-radius: 0em 0em 0em 0em;
+    height: auto;
 }
 
 .back{
    padding: 0em 0em 1.5em 1em;
    position: absolute;
    margin-top: -3.5em;
+   color: black;
 }
-
 
 .contenu_menu{
     width: 80%;
@@ -296,7 +293,16 @@ a{
     font-weight: 300;
     font-size: 0.9em;
     padding: 2em 0em 0em 1.3em;
+}
 
+.separator{
+    height: 2.2px;
+    width: 2.2em;
+    margin-left: 1.2em;
+    margin-top: -0.8em;
+	border: none;
+	box-shadow: none;
+	background-color: #99E2D0;
 }
 
 .menu_check{
@@ -364,7 +370,7 @@ a{
     }
 
     .reserv{
-        padding: 6.85em 0em 6.85em 0em;
+        padding: 7.47em 0em 7.47em 0em;
         flex: 3;
     }
 
@@ -373,7 +379,7 @@ a{
         flex: 2;
     }
 
-    .fonctionnement p{
+    .txt_fonction{
         font-size: 1.1em;
     }
 
@@ -384,7 +390,7 @@ a{
         justify-content: center;
     }
     
-    img{
+    .pict_resto{
         max-width: 600px;
         width: auto;
         flex: 2;
@@ -397,7 +403,7 @@ a{
         width: auto;
     }
 
-    .description_resto p{
+    .txt_menu{
         font-size: 1.5em;
         margin-top: 0.5em;
     }
@@ -411,26 +417,25 @@ a{
     .contenu_menu{
         flex-direction: row;
         flex-wrap: wrap;
+        margin-top: -15em;
+    }
+
+    .heart_menu{
+        margin-left: 55em;
+        padding-top: -10em;
     }
 
     .menu_check{
         width: 250px;
     }
 
-    .entree{
+    .menu_complet{
         display: flex;
+        margin: auto;
     }
 
-    .plat{
-        display: flex;
+    .commander{
+        margin: auto;
+        margin-top: 2em;
     }
-
-    .dessert{
-        display: flex;
-    }
-
-    .photo_menu{
-        width: 20%;
-    }
-
 }

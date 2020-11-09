@@ -205,8 +205,50 @@ a{
     text-decoration: none;
 }
 
-.resto__menu__description--icon{
-    margin-top: 0em;
+
+/* ACCUEIL PART.4 ANIM HEART */
+
+.resto__menu__anim{
+    position: relative;
+    width: auto;
+    display: flex;
+}
+
+.resto__menu__anim .resto__menu__anim--icon{
+    width: 25px;
+    cursor: pointer;
+}
+
+.resto__menu__anim .resto__menu__anim--icon path{
+    fill: transparent;
+    stroke-width: 25;
+    stroke: #9356DC;
+}
+
+.resto__menu__anim .resto__menu__anim--icon path{
+    stroke-dasharray: 1580;
+    stroke-dashoffset: 0;
+}
+
+.resto__menu__anim .resto__menu__anim--icon:hover path{
+    animation: animate-heart 0.8s linear forwards;
+}
+
+@keyframes animate-heart{
+    0%{
+        stroke-dashoffset: 0;
+    }
+    40%{
+        stroke-dashoffset: 1580;
+    }
+    80%{
+        stroke-dashoffset: 3160;
+        fill: transparent;
+    }
+    100%{
+        stroke-dashoffset: 3160;
+        fill: #9356DC;
+    }
 }
 
 /* ACCUEIL PART.5 */
@@ -417,7 +459,7 @@ a{
         margin-top: 0.5em;
     }
 
-    .resto__menu__description--icon{
+    .resto__menu__anim{
         font-size: 1.5em;
         align-self: flex-end;
         margin-bottom: 1em;

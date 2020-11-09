@@ -213,6 +213,51 @@ a{
     margin-top: 0em;
 }
 
+/* ACCUEIL PART.4 -- ANIM HEART */
+
+.heart__icon{
+    position: relative;
+    width: auto;
+    display: flex;
+}
+
+.heart__icon .heart__icon__anim{
+    width: 25px;
+    cursor: pointer;
+}
+
+.heart__icon .heart__icon__anim path{
+    fill: transparent;
+    stroke-width: 25;
+    stroke: #9356DC;
+}
+
+.heart__icon .heart__icon__anim path{
+    stroke-dasharray: 1580;
+    stroke-dashoffset: 0;
+}
+
+.heart__icon .heart__icon__anim:hover path{
+    animation: animate-heart 1s linear forwards;
+}
+
+@keyframes animate-heart{
+    0%{
+        stroke-dashoffset: 0;
+    }
+    40%{
+        stroke-dashoffset: 1580;
+    }
+    80%{
+        stroke-dashoffset: 3160;
+        fill: transparent;
+    }
+    100%{
+        stroke-dashoffset: 3160;
+        fill: #9356DC;
+    }
+}
+
 /* ACCUEIL PART.5 */
 
 
@@ -422,7 +467,7 @@ a{
         margin-top: 0.5em;
     }
 
-    .resto__menu__description--icon{
+    .heart__icon__anim{
         font-size: 1.5em;
         align-self: flex-end;
         margin-bottom: 1em;

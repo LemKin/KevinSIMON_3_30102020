@@ -11,7 +11,7 @@ body{
 
 .loader_bg{
     position: fixed;
-    z-index: 999999;
+    z-index: 2;
     background-color: #9356DC;
     width: 100%;
     height: 100%;
@@ -105,7 +105,7 @@ span:nth-child(3){
 /* ACCUEIL PART.1 */
 
 .head{
-    width: 80%;
+    width: 100%;
     background: #ffffff;
     margin: auto;
     display: flex;
@@ -137,7 +137,7 @@ span:nth-child(3){
 /* ACCUEIL PART.3 */
 
 .mode__reserv{
-    width: 80%;
+    width: 100%;
     background: #FAFAFA;
     margin: auto;
     display: flex;
@@ -179,7 +179,7 @@ span:nth-child(3){
 }
 
 .mode__fonctionnement{
-    width: 80%;
+    width: 100%;
     background: #ffffff;
     margin: auto;
     padding: 1.5em 0em 3em 0em;
@@ -244,7 +244,7 @@ span:nth-child(3){
 /* ACCUEIL PART.4 */
 
 .resto{
-    width: 80%;
+    width: 100%;
     background: #F5F5F5;
     margin: auto;
     padding: 1.5em 0em 3em 0em;
@@ -361,7 +361,7 @@ a{
 
 
 .foot{
-    width: 80%;
+    width: 100%;
     background: #212121;
     margin: auto;
     color: #ffffff;
@@ -392,7 +392,7 @@ a{
 /* MENU PART.1 */
 
 .head__menu{
-    width: 80%;
+    width: 100%;
     background: #ffffff;
     margin: auto;
     display: flex;
@@ -421,7 +421,7 @@ a{
 /* MENU PART.2 */
 
 .container{
-    width: 80%;
+    width: 100%;
     background: #F5F5F5;
     border-radius: 3em 3em 0em 0em;
     margin: auto;
@@ -525,9 +525,13 @@ a{
     body{
         max-width: 1200px;
     }
+
+    .loader_bg{
+        width: 1200px;
+    }
     
     .mode{
-        width: 80%;
+        width: 100%;
         margin: auto;
         display: flex;
         flex-wrap: wrap;
@@ -556,7 +560,7 @@ a{
     }
     
     .resto__menu--pict{
-        max-width: 600px;
+        max-width: 800px;
         width: auto;
         flex: 2;
         border-radius: 1em 0em 0em 1em;
@@ -577,6 +581,10 @@ a{
         font-size: 1.5em;
         align-self: flex-end;
         margin-bottom: 1em;
+    }
+
+    .resto__menu--new{
+        font-size: 0.8em;
     }
 
     .container{

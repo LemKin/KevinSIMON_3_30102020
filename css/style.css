@@ -7,6 +7,51 @@ body{
     flex-direction: column;
 }
 
+/* LOADING SPINNER */
+
+.loader_bg{
+    position: fixed;
+    z-index: 999999;
+    background-color: #9356DC;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader{
+    position: absolute;
+    font-family: 'Shrikhand', cursive;
+    font-size: 2.5em;
+    color: #ffffff;
+}
+
+.loader::before, .loader::after{
+    content: '';
+    position: absolute;
+    animation: loader 2s linear infinite;
+    opacity: 0;
+}
+
+.loader::before{
+    animation-delay: .5s;
+}
+
+@keyframes .loader{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
 /* ACCUEIL PART.1 */
 
 .head{
@@ -16,6 +61,11 @@ body{
     display: flex;
     justify-content: center;
     box-shadow: 0px 1px 5px #BDBDBD;
+}
+
+.head__logo{
+    font-family: 'Shrikhand', cursive;
+    font-size: 2.5em;
 }
 
 /* ACCUEIL PART.2 */
@@ -67,10 +117,15 @@ body{
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 1em;
     margin: 4px 2px;
     border-radius: 2rem;
     box-shadow: 0px 0px 18px #BDBDBD;
+}
+
+.mode__reserv--button:hover{
+    background-image: linear-gradient(350deg, #b07af1, #f890db);
+    box-shadow: 0px 0px 25px #a09f9f;
 }
 
 .mode__fonctionnement{
@@ -237,13 +292,14 @@ a{
 @keyframes animate-heart{
     0%{
         stroke-dashoffset: 0;
+        fill: #ede4f8;
     }
     40%{
         stroke-dashoffset: 1580;
     }
     80%{
         stroke-dashoffset: 3160;
-        fill: transparent;
+        /* fill: transparent; */
     }
     100%{
         stroke-dashoffset: 3160;
@@ -297,6 +353,7 @@ a{
 
 .head__menu--logo{
     text-align: center;
+    font-family: 'Shrikhand', cursive;
 }
 
 .head__menu--pict{
@@ -332,14 +389,6 @@ a{
     margin-top: 0em;
 }
 
-.container--heart{
-    align-self: flex-end;
-    margin-top: -2.8em;
-    padding: 0em 2em 0em 0em;
-    font-size: 1em;
-    margin-left: 1em;
-}
-
 .container__menu--service{
     font-weight: 300;
     font-size: 0.9em;
@@ -363,6 +412,11 @@ a{
     margin: 1em;
     padding: 0.5em;
     font-size: 0.9em;
+    transition: transform ease-in-out 0.5s;
+}
+
+.container__menu--check:hover{
+    transform: scale(1.05);
 }
 
 .container__menu--title{
@@ -397,11 +451,21 @@ a{
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 1em;
     margin: 4px 2px;
     margin-top: 2em;
     border-radius: 2rem;
     box-shadow: 0px 0px 18px #BDBDBD;
+}
+
+.container--button:hover{
+    background-image: linear-gradient(350deg, #b07af1, #f890db);
+    box-shadow: 0px 0px 25px #a09f9f;
+}
+
+.heart{
+    margin-left: 22em;
+    margin-top: -2.5em;
 }
 
 
@@ -488,5 +552,10 @@ a{
     .container--button{
         margin: auto;
         margin-top: 2em;
+    }
+
+    .heart{
+        margin-left: 30em;
+        margin-top: 0em;
     }
 }

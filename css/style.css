@@ -153,19 +153,19 @@ span:nth-child(3){
     padding: 1.5em 0em 3em 0em;
 }
 
-.mode__reserv--title{
+.mode__reserv__title{
     text-align: center;
     font-size: 1.2em;
 }
 
-.mode__reserv--txt{
+.mode__reserv__txt{
     font-size: 0.9em;
     font-weight: 300;
     text-align: center;
     margin-top: 0em;
 }
 
-.mode__reserv--button{
+.mode__reserv__button{
     background-image: linear-gradient(350deg, var(--primaire), var(--secondaire));
     width: 14em;
     align-self: center;
@@ -181,7 +181,7 @@ span:nth-child(3){
     box-shadow: 0px 0px 18px var(--bs_A);
 }
 
-.mode__reserv--button:hover{
+.mode__reserv__button:hover{
     background-image: linear-gradient(350deg, #b07af1, #f890db);
     box-shadow: 0px 0px 25px var(--bs_B);
 }
@@ -193,12 +193,12 @@ span:nth-child(3){
     padding: 1.5em 0em 3em 0em;
 }
 
-.mode__fonctionnement--title{
+.mode__fonctionnement__title{
     font-size: 1.2em;
     margin-left: 1em;
 }
 
-.mode__fonction--txt{
+.mode__fonction__txt{
     font-size: 0.9em;
     font-weight: 500;
 }
@@ -221,7 +221,7 @@ span:nth-child(3){
     box-shadow: 0px 1px 5px var(--bs_A);
 }
 
-.mode__fonction--number{
+.mode__fonction__number{
     background-color: var(--primaire);
     color: var(--fond_A);
     text-align: center;
@@ -235,14 +235,14 @@ span:nth-child(3){
     font-size: 0.8em;
 }
 
-.mode__fonction--iconBlack{
+.mode__fonction__icon{
     align-self: center;
     padding: 1.5em;
     font-size: 0.8em;
     color: black;
 }
 
-.mode__fonction--iconPurple{
+.mode__fonction__icon--purple{
     align-self: center;
     padding: 1.5em;
     font-size: 0.8em;
@@ -271,18 +271,18 @@ span:nth-child(3){
     color: black;
 }
 
-.resto__menu__description--txt{
+.resto__menu__description__txt{
     font-weight: 300;
     margin-top: -1em;
     margin-left: 1em;
 }
 
-.resto__menu--pict{
+.resto__menu__pict{
     width: 100%;
     border-radius: 1em 1em 0em 0em;
 }
 
-.resto__menu--new{
+.resto__menu__new{
     background-color: var(--tertiaire);
     color: green;
     width: 7em;
@@ -328,23 +328,23 @@ a{
     justify-content: flex-end;
 }
 
-.resto__menu__anim .resto__menu__anim--icon{
+.resto__menu__anim .resto__menu__anim__icon{
     width: 25px;
     cursor: pointer;
 }
 
-.resto__menu__anim .resto__menu__anim--icon path{
+.resto__menu__anim .resto__menu__anim__icon path{
     fill: transparent;
     stroke-width: 25;
     stroke: var(--primaire);
 }
 
-.resto__menu__anim .resto__menu__anim--icon path{
+.resto__menu__anim .resto__menu__anim__icon path{
     stroke-dasharray: 1580;
     stroke-dashoffset: 0;
 }
 
-.resto__menu__anim .resto__menu__anim--icon:hover path{
+.resto__menu__anim .resto__menu__anim__icon:hover path{
     animation: animate-heart 0.8s linear forwards;
 }
 
@@ -409,12 +409,12 @@ a{
     position: relative;
 }
 
-.head__menu--logo{
+.head__menu__logo{
     text-align: center;
     font-family: 'Shrikhand', cursive;
 }
 
-.head__menu--pict{
+.head__menu__pict{
     width: 100%;
     height: auto;
 }
@@ -440,7 +440,7 @@ a{
     flex-direction: column;
 }
 
-.container--title{
+.container__title{
     font-family: 'Shrikhand', cursive;
     font-size: 1.3em;
     padding: 0em 0em 0em 1em;
@@ -472,6 +472,7 @@ a{
     font-size: 0.9em;
     transition: transform ease-in-out 0.5s;
     overflow: hidden;
+    position: relative;
 }
 
 .container__menu--title{
@@ -479,6 +480,9 @@ a{
     font-size: 1em;
     margin-left: 0em;
     margin-top: 0em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .container__menu--txt{
@@ -487,14 +491,17 @@ a{
     margin-left: 0em;
     margin-top: -1em;
     text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
-.container__menu--price{
+.container__menu__price{
     margin-top: -2em;
     font-size: 0.9em;
     font-weight: 500;
     display: flex;
     justify-content: flex-end;
+    transition: .5s;
 }
 
 .container--button{
@@ -596,19 +603,18 @@ a{
     width: 50px;
     height: 54px;
     background-color: var(--tertiaire);
-    margin-left: 24em;
     margin-top: -0.5em;
     position: absolute;
     border-radius: 0em 0.8em 0.8em 0em;
     display: flex;
     justify-content: center;
     transition: 0.5s;
-    opacity: 0;
+    right: -50px;
 }
 
 .container__menu__check:hover .back_check{
-    margin-left: 20.1em;
-    opacity: 1;
+    transition: 0.5s;
+    right: 0px;
 }
 
 .container__menu__check:hover .check{
@@ -616,13 +622,16 @@ a{
     transition: 0.7s;
 }
 
-.container__menu__check:hover .container__menu--price{
+.container__menu__check:hover .container__menu__price{
     transition: .5s;
     padding-right: 3.5em;
 }
 
 .container__menu__check:hover .container__menu--txt{
     transition: .5s;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .check{
@@ -669,7 +678,7 @@ a{
         flex: 2;
     }
 
-    .mode__fonction--txt{
+    .mode__fonction__txt{
         font-size: 1.1em;
     }
 
@@ -680,7 +689,7 @@ a{
         justify-content: center;
     }
     
-    .resto__menu--pict{
+    .resto__menu__pict{
         max-width: 800px;
         width: auto;
         flex: 2;
@@ -693,7 +702,7 @@ a{
         width: auto;
     }
 
-    .resto__menu__description--txt{
+    .resto__menu__description__txt{
         font-size: 1.5em;
         margin-top: 0.5em;
     }
@@ -704,14 +713,12 @@ a{
         margin-bottom: 1em;
     }
 
-    .resto__menu--new{
+    .resto__menu__new{
         font-size: 0.8em;
     }
 
-    .back_check{
-        margin-left: 17em;
-    }
-    
+
+
     .container{
         flex-direction: row;
         flex-wrap: wrap;
@@ -728,14 +735,14 @@ a{
     }
 
     .container__menu__check:hover .back_check{
-        margin-left: 14.5em;
-        opacity: 1;
     }
 
     .container--button{
         margin: auto;
         margin-top: 9em;
     }
+
+
 
     .heart__menu__anim{
         margin-top: 0em;

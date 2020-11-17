@@ -29,6 +29,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: loader 3s linear forwards
 }
 
 .loader{
@@ -38,31 +39,25 @@ body{
     color: var(--fond_A);
 }
 
-.loader::before, .loader::after{
-    content: '';
-    position: absolute;
-    animation: loader 2s linear infinite;
-    opacity: 0;
-}
-
-@keyframes .loader{
+@keyframes loader{
     0%{
-        transform: scale(0);
-        opacity: 0;
-    }
-    50%{
         opacity: 1;
     }
+    95%{
+        opacity: 1;
+    }
+    99%{
+        z-index: 2;
+    }
     100%{
-        transform: scale(1);
         opacity: 0;
+        z-index: -10;
     }
 }
-
 
 .loader>span{
     color: transparent;
-    animation: 3s infinite forwards linear;
+    animation: 1s infinite forwards linear;
 }
 
 span:nth-child(1){
@@ -480,6 +475,9 @@ a{
     font-size: 1em;
     margin-left: 0em;
     margin-top: 0em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .container__menu__txt{
@@ -487,6 +485,9 @@ a{
     font-size: 0.8em;
     margin-left: 0em;
     margin-top: -1em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .container__menu__price{
@@ -499,7 +500,7 @@ a{
 }
 
 .container__button{
-    background-image: linear-gradient(350deg, var(--primaire), var(--secondaire) );
+    background-image: linear-gradient(350deg, var(--primaire), var(--secondaire));
     width: 14em;
     align-self: center;
     border: none;
@@ -597,7 +598,7 @@ a{
     width: 50px;
     height: 54px;
     background-color: var(--tertiaire);
-    margin-top: -0.5em;
+    margin-top: -3.25em;
     position: absolute;
     border-radius: 0em 0.8em 0.8em 0em;
     display: flex;
@@ -616,16 +617,8 @@ a{
     transition: 0.7s;
 }
 
-.container__menu__check:hover .container__menu__price{
-    transition: .5s;
-    padding-right: 3.5em;
-}
-
 .container__menu__check:hover .container__menu__txt{
     transition: .5s;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
 }
 
 .check{
@@ -637,6 +630,18 @@ a{
     align-self: center;
 }
 
+.div__txt{
+    width: 100%;
+}
+
+.container__menu__check:hover .div__txt{
+    width: 65%;
+}
+
+.container__menu__check:hover .container__menu__price{
+    transition: .5s;
+    margin-right: 50px;
+}
 
 
 /* RESPONSIVE */

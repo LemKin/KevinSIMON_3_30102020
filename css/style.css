@@ -365,7 +365,7 @@ a{
     }
 }
 
-/* ACCUEIL PART.5 */
+/* ACCUEIL & MENU - FOOTER */
 
 
 .foot{
@@ -391,7 +391,7 @@ a{
     line-height: 1em;
 }
 
-.foot__txt--clic{
+.foot__txt__clic{
     text-decoration: none;
     color: var(--fond_A);
 }
@@ -419,7 +419,7 @@ a{
     height: auto;
 }
 
-.head__menu--back{
+.head__menu__back{
     padding: 0em 0em 1.5em 1em;
     position: absolute;
     margin-top: -3.5em;
@@ -447,13 +447,13 @@ a{
     margin-top: 0em;
 }
 
-.container__menu--service{
+.container__menu__service{
     font-weight: 300;
     font-size: 0.9em;
     padding: 2em 0em 0em 1.3em;
 }
 
-.container__menu--separator{
+.container__menu__separator{
     height: 2.2px;
     width: 2.2em;
     margin-left: 1.2em;
@@ -475,24 +475,18 @@ a{
     position: relative;
 }
 
-.container__menu--title{
+.container__menu__title{
     font-weight: 500;
     font-size: 1em;
     margin-left: 0em;
     margin-top: 0em;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
 }
 
-.container__menu--txt{
+.container__menu__txt{
     font-weight: 300;
     font-size: 0.8em;
     margin-left: 0em;
     margin-top: -1em;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
 }
 
 .container__menu__price{
@@ -504,8 +498,8 @@ a{
     transition: .5s;
 }
 
-.container--button{
-    background-image: linear-gradient(350deg, var(--primaire), var(--secondaire));
+.container__button{
+    background-image: linear-gradient(350deg, var(--primaire), var(--secondaire) );
     width: 14em;
     align-self: center;
     border: none;
@@ -521,7 +515,7 @@ a{
     box-shadow: 0px 0px 18px var(--bs_A);
 }
 
-.container--button:hover{
+.container__button:hover{
     background-image: linear-gradient(350deg, #b07af1, #f890db);
     box-shadow: 0px 0px 25px var(--bs_B);
 }
@@ -627,7 +621,7 @@ a{
     padding-right: 3.5em;
 }
 
-.container__menu__check:hover .container__menu--txt{
+.container__menu__check:hover .container__menu__txt{
     transition: .5s;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -717,8 +711,6 @@ a{
         font-size: 0.8em;
     }
 
-
-
     .container{
         flex-direction: row;
         flex-wrap: wrap;
@@ -734,15 +726,10 @@ a{
         margin: auto;
     }
 
-    .container__menu__check:hover .back_check{
-    }
-
-    .container--button{
+    .container__button{
         margin: auto;
         margin-top: 9em;
     }
-
-
 
     .heart__menu__anim{
         margin-top: 0em;

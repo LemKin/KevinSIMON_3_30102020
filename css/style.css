@@ -468,6 +468,7 @@ a{
     transition: transform ease-in-out 0.5s;
     overflow: hidden;
     position: relative;
+    cursor: pointer;
 }
 
 .container__menu__title{

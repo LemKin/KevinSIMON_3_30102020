@@ -12,7 +12,6 @@ html{
 body{
     font-family: 'Roboto', sans-serif;
     margin: auto;
-    padding: 0;
     background: #EEEEEE;
     display: flex;
     flex-direction: column;
@@ -29,7 +28,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: loader 3s linear forwards
+    animation: loader 3s linear forwards;
 }
 
 .loader{
@@ -57,7 +56,7 @@ body{
 
 .loader>span{
     color: transparent;
-    animation: 1s infinite forwards linear;
+    animation: 1s infinite;
 }
 
 span:nth-child(1){
@@ -67,7 +66,7 @@ span:nth-child(1){
     10%{
         color: transparent;
     }
-    12%{
+    20%{
         color: var(--fond_A);
     }
     100%{
@@ -79,10 +78,10 @@ span:nth-child(2){
     animation-name: fill2;
 }
 @keyframes fill2{
-    20%{
+    30%{
         color: transparent;
     }
-    22%{
+    40%{
         color: var(--fond_A);
     }
     100%{
@@ -94,10 +93,10 @@ span:nth-child(3){
     animation-name: fill3;
 }
 @keyframes fill3{
-    30%{
+    50%{
         color: transparent;
     }
-    32%{
+    60%{
         color: var(--fond_A);
     }
     100%{
@@ -134,15 +133,12 @@ span:nth-child(3){
 
 .local__txt{
     font-weight: 400;
-    margin-top: 1.1em;
 }
 
 /* ACCUEIL PART.3 */
 
 .mode__reserv{
-    width: 100%;
     background: var(--fond_B);
-    margin: auto;
     display: flex;
     flex-direction: column;
     padding: 1.5em 0em 3em 0em;
@@ -174,17 +170,18 @@ span:nth-child(3){
     margin: 4px 2px;
     border-radius: 2rem;
     box-shadow: 0px 0px 18px var(--bs_A);
+    transition: .5s;
 }
 
 .mode__reserv__button:hover{
+    /* ANIMATION : au survol, le bouton s'éclaircie et l'ombre devient plus visible */
     background-image: linear-gradient(350deg, #b07af1, #f890db);
     box-shadow: 0px 0px 25px var(--bs_B);
+    transition: .5s;
 }
 
 .mode__fonctionnement{
-    width: 100%;
     background: var(--fond_A);
-    margin: auto;
     padding: 1.5em 0em 3em 0em;
 }
 
@@ -221,7 +218,6 @@ span:nth-child(3){
     color: var(--fond_A);
     text-align: center;
     width: 1.2em;
-    height: 1.2em;
     border-radius: 2rem;
     align-self: center;
     margin-left: -1.5em;
@@ -274,6 +270,7 @@ span:nth-child(3){
 
 .resto__menu__pict{
     width: 100%;
+    height: 100%;
     border-radius: 1em 1em 0em 0em;
 }
 
@@ -284,12 +281,10 @@ span:nth-child(3){
     border: none;
     padding: 0.3rem;
     text-align: center;
-    text-decoration: none;
     font-size: 0.5em;
     border-radius: 0.1rem;
     position: absolute;
     right: 15px;
-    top: 20px;
     z-index: 1;
     margin: 1em 1em 0em 0em;
 }
@@ -329,24 +324,23 @@ a{
 }
 
 .resto__menu__anim .resto__menu__anim__icon path{
-    fill: transparent;
+    fill: transparent; /* <fill> définit la couleur de remplissage */
     stroke-width: 25;
-    stroke: var(--primaire);
+    stroke: var(--primaire); /* <stroke> définit la couleur de la bordure */
 }
 
 .resto__menu__anim .resto__menu__anim__icon path{
-    stroke-dasharray: 1580;
-    stroke-dashoffset: 0;
+    stroke-dasharray: 1580; /* <stroke-dasharray> c'est un attribut de présentation qui décale la position de départ du contour, a un effet sur l'élément <path> */
 }
 
 .resto__menu__anim .resto__menu__anim__icon:hover path{
-    animation: animate-heart 0.8s linear forwards;
+    animation: animate-heart 0.8s /* durée de l'anim */ linear /* anim à effet linéaire, sans ralentissement ni courbe */ forwards /*permet de mettre fin à l'animation après une loop */;
 }
 
 @keyframes animate-heart{
     0%{
-        stroke-dashoffset: 0;
-        fill: #ede4f8;
+        stroke-dashoffset: 0; /* progression contour du coeur */
+        fill: #ede4f8; /* couleur de départ de remplissage du coeur */
     }
     40%{
         stroke-dashoffset: 1580;
@@ -356,7 +350,7 @@ a{
     }
     100%{
         stroke-dashoffset: 3160;
-        fill: var(--primaire);
+        fill: var(--primaire); /* couleur finale de remplissage du coeur */
     }
 }
 
@@ -364,9 +358,7 @@ a{
 
 
 .foot{
-    width: 100%;
     background: var(--sombre);
-    margin: auto;
     color: var(--fond_A);
     padding: 1em 0em 2em 0em;
     font-size: 0.8em;
@@ -395,13 +387,7 @@ a{
 /* MENU PART.1 */
 
 .head__menu{
-    width: 100%;
     background: var(--fond_A);
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
 }
 
 .head__menu__logo{
@@ -411,7 +397,6 @@ a{
 
 .head__menu__pict{
     width: 100%;
-    height: auto;
 }
 
 .head__menu__back{
@@ -427,7 +412,6 @@ a{
     width: 100%;
     background: var(--fond_B);
     border-radius: 3em 3em 0em 0em;
-    margin: auto;
     z-index: 1;
     margin-top: -3em;
     padding: 1.5em 0em 3em 0em;
@@ -507,11 +491,7 @@ a{
     border: none;
     color: var(--fond_A);
     padding: 1rem;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
     font-size: 1em;
-    margin: 4px 2px;
     margin-top: 2em;
     border-radius: 2rem;
     box-shadow: 0px 0px 18px var(--bs_A);
@@ -526,7 +506,6 @@ a{
 
 .heart__menu__anim{
     position: relative;
-    width: auto;
     display: flex;
     justify-content: flex-end;
     margin-top: -2.8em;
@@ -691,7 +670,7 @@ a{
     
     .resto__menu__pict{
         max-width: 800px;
-        width: auto;
+        max-height: 400px;
         flex: 2;
         border-radius: 1em 0em 0em 1em;
     }
@@ -718,8 +697,6 @@ a{
     }
 
     .container{
-        flex-direction: row;
-        flex-wrap: wrap;
         margin-top: -7em;
     }
 
@@ -734,11 +711,6 @@ a{
 
     .container__button{
         margin: auto;
-        margin-top: 9em;
-    }
-
-    .heart__menu__anim{
-        margin-top: 0em;
-        margin-left: 52em;
+        margin-top: 2em;
     }
 }

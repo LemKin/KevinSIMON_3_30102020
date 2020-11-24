@@ -157,7 +157,7 @@ span:nth-child(3){
 }
 
 .mode__reserv__button{
-    background-image: linear-gradient(350deg, var(--primaire), var(--secondaire));
+    background-image: linear-gradient(350deg, #9356DC, #FF79DA);
     width: 14em;
     align-self: center;
     border: none;
@@ -171,10 +171,10 @@ span:nth-child(3){
     border-radius: 2rem;
     box-shadow: 0px 0px 18px var(--bs_A);
     transition: .5s;
+    cursor: pointer;
 }
 
 .mode__reserv__button:hover{
-    /* ANIMATION : au survol, le bouton s'éclaircie et l'ombre devient plus visible */
     background-image: linear-gradient(350deg, #b07af1, #f890db);
     box-shadow: 0px 0px 25px var(--bs_B);
     transition: .5s;
@@ -324,23 +324,20 @@ a{
 }
 
 .resto__menu__anim .resto__menu__anim__icon path{
-    fill: transparent; /* <fill> définit la couleur de remplissage */
+    fill: #ffffff;
     stroke-width: 25;
-    stroke: var(--primaire); /* <stroke> définit la couleur de la bordure */
-}
-
-.resto__menu__anim .resto__menu__anim__icon path{
-    stroke-dasharray: 1580; /* <stroke-dasharray> c'est un attribut de présentation qui décale la position de départ du contour, a un effet sur l'élément <path> */
+    stroke: var(--primaire);
+    stroke-dasharray: 1580;
 }
 
 .resto__menu__anim .resto__menu__anim__icon:hover path{
-    animation: animate-heart 0.8s /* durée de l'anim */ linear /* anim à effet linéaire, sans ralentissement ni courbe */ forwards /*permet de mettre fin à l'animation après une loop */;
+    animation: animate-heart 0.8s linear forwards;
 }
 
 @keyframes animate-heart{
     0%{
-        stroke-dashoffset: 0; /* progression contour du coeur */
-        fill: #ede4f8; /* couleur de départ de remplissage du coeur */
+        stroke-dashoffset: 0;
+        fill: #ede4f8;
     }
     40%{
         stroke-dashoffset: 1580;
@@ -350,7 +347,7 @@ a{
     }
     100%{
         stroke-dashoffset: 3160;
-        fill: var(--primaire); /* couleur finale de remplissage du coeur */
+        fill: var(--primaire);
     }
 }
 
@@ -381,6 +378,7 @@ a{
 .foot__txt__clic{
     text-decoration: none;
     color: var(--fond_A);
+    cursor: pointer;
 }
 
 
@@ -485,7 +483,7 @@ a{
 }
 
 .container__button{
-    background-image: linear-gradient(350deg, var(--primaire), var(--secondaire));
+    background-image: linear-gradient(350deg, #9356DC, #FF79DA);
     width: 14em;
     align-self: center;
     border: none;
@@ -495,6 +493,7 @@ a{
     margin-top: 2em;
     border-radius: 2rem;
     box-shadow: 0px 0px 18px var(--bs_A);
+    cursor: pointer;
 }
 
 .container__button:hover{
@@ -518,7 +517,7 @@ a{
 }
 
 .heart__menu__anim .heart__menu__anim__icon path{
-    fill: transparent;
+    fill: #ffffff;
     stroke-width: 25;
     stroke: var(--primaire);
 }
@@ -553,8 +552,7 @@ a{
 /* MENU PART.2 ANIM PLATS */
 
 .container__menu__check {
-    animation: fadeIn 3s;
-    margin-top: 1em;
+    animation: fadeIn 2s;
 }
 
 @keyframes fadeIn {
@@ -562,12 +560,9 @@ a{
         opacity: 0;
         margin-top: 2em;
     }
-    70%{
-        opacity: 1;
-        margin-top: 1em;
-    }
     100%{
         opacity: 1;
+        margin-top: 1em;
     }
 }
 
@@ -592,15 +587,6 @@ a{
     right: 0px;
 }
 
-.container__menu__check:hover .check{
-    transform: rotate(360deg);
-    transition: 0.7s;
-}
-
-.container__menu__check:hover .container__menu__txt{
-    transition: .5s;
-}
-
 .check{
     color: var(--tertiaire);
     border-radius: 50%;
@@ -610,17 +596,22 @@ a{
     align-self: center;
 }
 
+.container__menu__check:hover .check{
+    transform: rotate(360deg);
+    transition: 0.7s;
+}
+
+.container__menu__check:hover .container__menu__price{
+    transition: .5s;
+    margin-right: 50px;
+}
+
 .div__txt{
     width: 100%;
 }
 
 .container__menu__check:hover .div__txt{
     width: 65%;
-}
-
-.container__menu__check:hover .container__menu__price{
-    transition: .5s;
-    margin-right: 50px;
 }
 
 

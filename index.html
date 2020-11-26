@@ -4,11 +4,19 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="css/style.css" />
+		<link rel="shortcut icon" href="img/favicon.ico"/>
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap" rel="stylesheet">
 		<script src="https://kit.fontawesome.com/50a958fe3e.js" crossorigin="anonymous"></script>
 		<title>ohmyfood</title>
 	</head>
 	<body>
+		<div class="loader_bg">
+			<div class="loader">
+				<span>oh</span>
+				<span>my</span>
+				<span>food</span>
+			</div>
+		</div>
 		<!-- ACCUEIL PART.1 -->
 		<header class="head">
 			<h1 class="head__logo">ohmyfood</h1>
@@ -23,40 +31,40 @@
 		<!-- ACCUEIL PART.3 -->
 		<main class="mode">
 			<article class="mode__reserv">
-				<h2 class="mode__reserv--title">Réservez le menu qui vous convient</h2>
-				<p class="mode__reserv--txt">
+				<h2 class="mode__reserv__title">Réservez le menu qui vous convient</h2>
+				<p class="mode__reserv__txt">
 					Découvrez des restaurants d'exception,
 					<br>
 					sélectionnés par nos soins.
 				</p>
-				<button class="mode__reserv--button">Explorez nos restaurants</button>
+				<button class="mode__reserv__button">Explorez nos restaurants</button>
 			</article>
 			<article class="mode__fonctionnement">
-				<h2 class="mode__fonctionnement--title">Fonctionnement</h2>
+				<h2 class="mode__fonctionnement__title">Fonctionnement</h2>
 				<div class="mode__fonction">
-					<div class="mode__fonction--number">
+					<div class="mode__fonction__number">
 						1
 					</div>
-					<i class="fas fa-mobile-alt mode__fonction--iconBlack"></i>
-					<p class="mode__fonction--txt">
+					<i class="fas fa-mobile-alt mode__fonction__icon"></i>
+					<p class="mode__fonction__txt">
 						Choissisez un restaurant
 					</p>
 				</div>
 				<div class="mode__fonction">
-					<div class="mode__fonction--number">
+					<div class="mode__fonction__number">
 						2
 					</div>
-					<i class="fas fa-list mode__fonction--iconBlack"></i>
-					<p class="mode__fonction--txt">
+					<i class="fas fa-list mode__fonction__icon"></i>
+					<p class="mode__fonction__txt">
 						Composez votre menu
 					</p>
 				</div>
 				<div class="mode__fonction--color">
-					<div class="mode__fonction--number">
+					<div class="mode__fonction__number">
 						3
 					</div>
-					<i class="fas fa-store mode__fonction--iconPurple"></i>
-					<p class="mode__fonction--txt">
+					<i class="fas fa-store mode__fonction__icon--purple"></i>
+					<p class="mode__fonction__txt">
 						Dégustez au restaurant
 					</p>
 				</div>
@@ -66,26 +74,21 @@
 		<section class="resto">
 			<h2 class="resto__title">Restaurants</h2>
 			<a href="LaPaletteDuGout.html" class="resto__menu">
-				<div class="resto__menu--new">
+				<div class="resto__menu__new">
 					Nouveau
 				</div>
-				<img class="resto__menu--pict" src="img/LaPaletteDuGout.jpg" alt="" />
+				<img class="resto__menu__pict" src="img/LaPaletteDuGout_B.jpg" alt="" />
 				<div class="resto__menu__description">
-					<p class="resto__menu__description--txt">
+					<p class="resto__menu__description__txt">
 						<span>La palette du goût</span>
 						<br>
 						Ménilmontant
 					</p>
-					<div class="heart__icon">
-						<div class="heart__icon__anim">
-							<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-								viewBox="-10 0 531 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+					<div class="resto__menu__anim">
+						<div class="resto__menu__anim__icon">
+							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-10 0 531 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
 								<g>
-								<path d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268
-								c-8.437-15.419-22.768-36.621-44.293-53.268C189.255,38.804,163.783,30,136,30C58.468,30,0,93.417,0,177.514
-								c0,90.854,72.943,153.015,183.369,247.118c18.752,15.981,40.007,34.095,62.099,53.414C248.38,480.596,252.12,482,256,482
-								s7.62-1.404,10.532-3.953c22.094-19.322,43.348-37.435,62.111-53.425C439.057,330.529,512,268.368,512,177.514
-								C512,93.417,453.532,30,376,30z"/>
+									<path d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268c-8.437-15.419-22.768-36.621-44.293-53.268C189.255,38.804,163.783,30,136,30C58.468,30,0,93.417,0,177.514c0,90.854,72.943,153.015,183.369,247.118c18.752,15.981,40.007,34.095,62.099,53.414C248.38,480.596,252.12,482,256,482s7.62-1.404,10.532-3.953c22.094-19.322,43.348-37.435,62.111-53.425C439.057,330.529,512,268.368,512,177.514C512,93.417,453.532,30,376,30z"/>
 								</g>
 							</svg>
 						</div>
@@ -93,26 +96,21 @@
 				</div>
 			</a>
 			<a href="LaNoteEnchantee.html" class="resto__menu">
-				<div class="resto__menu--new">
+				<div class="resto__menu__new">
 					Nouveau
 				</div>
-				<img class="resto__menu--pict" src="img/LaNoteEnchantee.jpg" alt="" />
+				<img class="resto__menu__pict" src="img/LaNoteEnchantee_B.jpg" alt="" />
 				<div class="resto__menu__description">
-					<p class="resto__menu__description--txt">
+					<p class="resto__menu__description__txt">
 						<span>La note enchantée</span>
 						<br>
 						Charonne
 					</p>
-					<div class="heart__icon">
-						<div class="heart__icon__anim">
-							<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-								viewBox="-10 0 531 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+					<div class="resto__menu__anim">
+						<div class="resto__menu__anim__icon">
+							<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-10 0 531 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
 								<g>
-								<path d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268
-								c-8.437-15.419-22.768-36.621-44.293-53.268C189.255,38.804,163.783,30,136,30C58.468,30,0,93.417,0,177.514
-								c0,90.854,72.943,153.015,183.369,247.118c18.752,15.981,40.007,34.095,62.099,53.414C248.38,480.596,252.12,482,256,482
-								s7.62-1.404,10.532-3.953c22.094-19.322,43.348-37.435,62.111-53.425C439.057,330.529,512,268.368,512,177.514
-								C512,93.417,453.532,30,376,30z"/>
+									<path d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268c-8.437-15.419-22.768-36.621-44.293-53.268C189.255,38.804,163.783,30,136,30C58.468,30,0,93.417,0,177.514c0,90.854,72.943,153.015,183.369,247.118c18.752,15.981,40.007,34.095,62.099,53.414C248.38,480.596,252.12,482,256,482s7.62-1.404,10.532-3.953c22.094-19.322,43.348-37.435,62.111-53.425C439.057,330.529,512,268.368,512,177.514C512,93.417,453.532,30,376,30z"/>
 								</g>
 							</svg>
 						</div>
@@ -120,23 +118,18 @@
 				</div>
 			</a>
 			<a href="ALaFrancaise.html" class="resto__menu">
-				<img class="resto__menu--pict" src="img/ALaFrancaise.jpg" alt="" />
+				<img class="resto__menu__pict" src="img/ALaFrancaise_B.jpg" alt="" />
 				<div class="resto__menu__description">
-					<p class="resto__menu__description--txt">
+					<p class="resto__menu__description__txt">
 						<span>À la française</span>
 						<br>
 						Cité Rouge
 					</p>
-					<div class="heart__icon">
-						<div class="heart__icon__anim">
-							<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-								viewBox="-10 0 531 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+					<div class="resto__menu__anim">
+						<div class="resto__menu__anim__icon">
+							<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-10 0 531 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
 								<g>
-								<path d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268
-								c-8.437-15.419-22.768-36.621-44.293-53.268C189.255,38.804,163.783,30,136,30C58.468,30,0,93.417,0,177.514
-								c0,90.854,72.943,153.015,183.369,247.118c18.752,15.981,40.007,34.095,62.099,53.414C248.38,480.596,252.12,482,256,482
-								s7.62-1.404,10.532-3.953c22.094-19.322,43.348-37.435,62.111-53.425C439.057,330.529,512,268.368,512,177.514
-								C512,93.417,453.532,30,376,30z"/>
+									<path d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268c-8.437-15.419-22.768-36.621-44.293-53.268C189.255,38.804,163.783,30,136,30C58.468,30,0,93.417,0,177.514c0,90.854,72.943,153.015,183.369,247.118c18.752,15.981,40.007,34.095,62.099,53.414C248.38,480.596,252.12,482,256,482s7.62-1.404,10.532-3.953c22.094-19.322,43.348-37.435,62.111-53.425C439.057,330.529,512,268.368,512,177.514C512,93.417,453.532,30,376,30z"/>
 								</g>
 							</svg>
 						</div>
@@ -144,23 +137,18 @@
 				</div>
 			</a>
 			<a href="LeDeliceDesSens.html" class="resto__menu">
-				<img class="resto__menu--pict" src="img/LeDeliceDesSens.jpg" alt="" />
+				<img class="resto__menu__pict" src="img/LeDeliceDesSens_B.jpg" alt="" />
 				<div class="resto__menu__description">
-					<p class="resto__menu__description--txt">
+					<p class="resto__menu__description__txt">
 						<span>Le délice des sens</span>
 						<br>
 						Folie-Méricourt
 					</p>
-					<div class="heart__icon">
-						<div class="heart__icon__anim">
-							<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-								viewBox="-10 0 531 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+					<div class="resto__menu__anim">
+						<div class="resto__menu__anim__icon">
+							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-10 0 531 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
 								<g>
-								<path d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268
-								c-8.437-15.419-22.768-36.621-44.293-53.268C189.255,38.804,163.783,30,136,30C58.468,30,0,93.417,0,177.514
-								c0,90.854,72.943,153.015,183.369,247.118c18.752,15.981,40.007,34.095,62.099,53.414C248.38,480.596,252.12,482,256,482
-								s7.62-1.404,10.532-3.953c22.094-19.322,43.348-37.435,62.111-53.425C439.057,330.529,512,268.368,512,177.514
-								C512,93.417,453.532,30,376,30z"/>
+									<path d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268c-8.437-15.419-22.768-36.621-44.293-53.268C189.255,38.804,163.783,30,136,30C58.468,30,0,93.417,0,177.514c0,90.854,72.943,153.015,183.369,247.118c18.752,15.981,40.007,34.095,62.099,53.414C248.38,480.596,252.12,482,256,482s7.62-1.404,10.532-3.953c22.094-19.322,43.348-37.435,62.111-53.425C439.057,330.529,512,268.368,512,177.514C512,93.417,453.532,30,376,30z"/>
 								</g>
 							</svg>
 						</div>
@@ -185,7 +173,7 @@
 				Mentions légales
 			</p>
 			<p class="foot__txt">
-				<a class="foot__txt--clic" href="mailto:kevinsimon.pro@gmail.com">Contact</a>
+				<a class="foot__txt__clic" href="mailto:kevinsimon.pro@gmail.com">Contact</a>
 			</p>
 		</footer>
 	</body>

@@ -1,25 +1,123 @@
+html{
+    --primaire: #9356DC;
+    --secondaire: #FF79DA;
+    --tertiaire: #99E2D0;
+    --fond_A: #ffffff;
+    --fond_B: #FAFAFA;
+    --bs_A: #BDBDBD;
+    --bs_B: #a09f9f;
+    --sombre: #212121;
+}
+
 body{
     font-family: 'Roboto', sans-serif;
     margin: auto;
-    padding: 0;
     background: #EEEEEE;
     display: flex;
     flex-direction: column;
 }
 
+/* ACCUEIL ANIM LOADING SPINNER */
+
+.loader_bg{
+    position: fixed;
+    z-index: 2;
+    background-color: var(--primaire);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: loader 3s linear forwards;
+}
+
+.loader{
+    position: absolute;
+    font-family: 'Shrikhand', cursive;
+    font-size: 2.5em;
+    color: var(--fond_A);
+}
+
+@keyframes loader{
+    0%{
+        opacity: 1;
+    }
+    95%{
+        opacity: 1;
+    }
+    99%{
+        z-index: 2;
+    }
+    100%{
+        opacity: 0;
+        z-index: -10;
+    }
+}
+
+.loader>span{
+    color: transparent;
+    animation: 1s infinite;
+}
+
+span:nth-child(1){
+    animation-name: fill1;
+}
+@keyframes fill1{
+    10%{
+        color: transparent;
+    }
+    20%{
+        color: var(--fond_A);
+    }
+    100%{
+        color: var(--fond_A);
+    }
+}
+
+span:nth-child(2){
+    animation-name: fill2;
+}
+@keyframes fill2{
+    30%{
+        color: transparent;
+    }
+    40%{
+        color: var(--fond_A);
+    }
+    100%{
+        color: var(--fond_A);
+    }
+}
+
+span:nth-child(3){
+    animation-name: fill3;
+}
+@keyframes fill3{
+    50%{
+        color: transparent;
+    }
+    60%{
+        color: var(--fond_A);
+    }
+    100%{
+        color: var(--fond_A);
+    }
+}
+
 /* ACCUEIL PART.1 */
 
 .head{
-    width: 80%;
-    background: #ffffff;
+    width: 100%;
+    background: var(--fond_A);
     margin: auto;
     display: flex;
     justify-content: center;
-    box-shadow: 0px 1px 5px #BDBDBD;
+    box-shadow: 0px 1px 5px var(--bs_A);
 }
 
 .head__logo{
     font-family: 'Shrikhand', cursive;
+    font-size: 2.5em;
 }
 
 /* ACCUEIL PART.2 */
@@ -35,72 +133,75 @@ body{
 
 .local__txt{
     font-weight: 400;
-    margin-top: 1.1em;
 }
 
 /* ACCUEIL PART.3 */
 
 .mode__reserv{
-    width: 80%;
-    background: #FAFAFA;
-    margin: auto;
+    background: var(--fond_B);
     display: flex;
     flex-direction: column;
     padding: 1.5em 0em 3em 0em;
 }
 
-.mode__reserv--title{
+.mode__reserv__title{
     text-align: center;
     font-size: 1.2em;
 }
 
-.mode__reserv--txt{
+.mode__reserv__txt{
     font-size: 0.9em;
     font-weight: 300;
     text-align: center;
     margin-top: 0em;
 }
 
-.mode__reserv--button{
+.mode__reserv__button{
     background-image: linear-gradient(350deg, #9356DC, #FF79DA);
     width: 14em;
     align-self: center;
     border: none;
-    color: #ffffff;
+    color: var(--fond_A);
     padding: 1rem;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 1em;
     margin: 4px 2px;
     border-radius: 2rem;
-    box-shadow: 0px 0px 18px #BDBDBD;
+    box-shadow: 0px 0px 18px var(--bs_A);
+    transition: .5s;
+    cursor: pointer;
+}
+
+.mode__reserv__button:hover{
+    background-image: linear-gradient(350deg, #b07af1, #f890db);
+    box-shadow: 0px 0px 25px var(--bs_B);
+    transition: .5s;
 }
 
 .mode__fonctionnement{
-    width: 80%;
-    background: #ffffff;
-    margin: auto;
+    background: var(--fond_A);
     padding: 1.5em 0em 3em 0em;
 }
 
-.mode__fonctionnement--title{
+.mode__fonctionnement__title{
     font-size: 1.2em;
     margin-left: 1em;
 }
 
-.mode__fonction--txt{
+.mode__fonction__txt{
     font-size: 0.9em;
     font-weight: 500;
 }
 
 .mode__fonction{
-    background: #F5F5F5;
+    background: var(--fond_B);
     border-radius: 1.5rem;
     padding: 0.6em;
     margin: 1em;
     display: flex;
-    box-shadow: 0px 1px 5px #BDBDBD;
+    box-shadow: 0px 1px 5px var(--bs_A);
 }
 
 .mode__fonction--color{
@@ -109,15 +210,14 @@ body{
     padding: 0.6em;
     margin: 1em;
     display: flex;
-    box-shadow: 0px 1px 5px #BDBDBD;
+    box-shadow: 0px 1px 5px var(--bs_A);
 }
 
-.mode__fonction--number{
-    background-color: #9356DC;
-    color: #ffffff;
+.mode__fonction__number{
+    background-color: var(--primaire);
+    color: var(--fond_A);
     text-align: center;
     width: 1.2em;
-    height: 1.2em;
     border-radius: 2rem;
     align-self: center;
     margin-left: -1.5em;
@@ -126,25 +226,25 @@ body{
     font-size: 0.8em;
 }
 
-.mode__fonction--iconBlack{
+.mode__fonction__icon{
     align-self: center;
     padding: 1.5em;
     font-size: 0.8em;
     color: black;
 }
 
-.mode__fonction--iconPurple{
+.mode__fonction__icon--purple{
     align-self: center;
     padding: 1.5em;
     font-size: 0.8em;
-    color: #9356DC;
+    color: var(--primaire);
 }
 
 /* ACCUEIL PART.4 */
 
 .resto{
-    width: 80%;
-    background: #F5F5F5;
+    width: 100%;
+    background: var(--fond_B);
     margin: auto;
     padding: 1.5em 0em 3em 0em;
 }
@@ -162,41 +262,40 @@ body{
     color: black;
 }
 
-.resto__menu__description--txt{
+.resto__menu__description__txt{
     font-weight: 300;
     margin-top: -1em;
     margin-left: 1em;
 }
 
-.resto__menu--pict{
+.resto__menu__pict{
     width: 100%;
+    height: 100%;
     border-radius: 1em 1em 0em 0em;
 }
 
-.resto__menu--new{
-    background-color: #99E2D0;
+.resto__menu__new{
+    background-color: var(--tertiaire);
     color: green;
     width: 7em;
     border: none;
     padding: 0.3rem;
     text-align: center;
-    text-decoration: none;
     font-size: 0.5em;
     border-radius: 0.1rem;
     position: absolute;
     right: 15px;
-    top: 20px;
     z-index: 1;
     margin: 1em 1em 0em 0em;
 }
 
 .resto__menu__description{
-    background-color: #ffffff;
+    background-color: var(--fond_A);
     width: 100%;
     border-radius: 0em 0em 1em 1em;
     margin-top: -0.2em;
     padding: 1.5em 1em 0em 0em;
-    box-shadow: 0px 1px 5px #BDBDBD;
+    box-shadow: 0px 1px 5px var(--bs_A);
     display: flex;
     justify-content: space-between;
 }
@@ -209,63 +308,56 @@ a{
     text-decoration: none;
 }
 
-.resto__menu__description--icon{
-    margin-top: 0em;
-}
 
-/* ACCUEIL PART.4 -- ANIM HEART */
+/* ACCUEIL PART.4 ANIM HEART */
 
-.heart__icon{
+.resto__menu__anim{
     position: relative;
     width: auto;
     display: flex;
+    justify-content: flex-end;
 }
 
-.heart__icon .heart__icon__anim{
+.resto__menu__anim .resto__menu__anim__icon{
     width: 25px;
     cursor: pointer;
 }
 
-.heart__icon .heart__icon__anim path{
-    fill: transparent;
+.resto__menu__anim .resto__menu__anim__icon path{
+    fill: #ffffff;
     stroke-width: 25;
-    stroke: #9356DC;
-}
-
-.heart__icon .heart__icon__anim path{
+    stroke: black;
     stroke-dasharray: 1580;
-    stroke-dashoffset: 0;
 }
 
-.heart__icon .heart__icon__anim:hover path{
-    animation: animate-heart 1s linear forwards;
+.resto__menu__anim .resto__menu__anim__icon:hover path{
+    animation: animate-heart 0.8s linear forwards;
+    stroke: var(--primaire);
 }
 
 @keyframes animate-heart{
     0%{
         stroke-dashoffset: 0;
+        fill: #ede4f8;
     }
     40%{
         stroke-dashoffset: 1580;
     }
     80%{
         stroke-dashoffset: 3160;
-        fill: transparent;
     }
     100%{
         stroke-dashoffset: 3160;
-        fill: #9356DC;
+        fill: var(--primaire);
     }
 }
 
-/* ACCUEIL PART.5 */
+/* ACCUEIL & MENU - FOOTER */
 
 
 .foot{
-    width: 80%;
-    background: #212121;
-    margin: auto;
-    color: #ffffff;
+    background: var(--sombre);
+    color: var(--fond_A);
     padding: 1em 0em 2em 0em;
     font-size: 0.8em;
     line-height: 0.8em;
@@ -284,35 +376,29 @@ a{
     line-height: 1em;
 }
 
-.foot__txt--clic{
+.foot__txt__clic{
     text-decoration: none;
-    color: #ffffff;
+    color: var(--fond_A);
+    cursor: pointer;
 }
 
 
 /* MENU PART.1 */
 
 .head__menu{
-    width: 80%;
-    background: #ffffff;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
+    background: var(--fond_A);
 }
 
-.head__menu--logo{
+.head__menu__logo{
     text-align: center;
     font-family: 'Shrikhand', cursive;
 }
 
-.head__menu--pict{
+.head__menu__pict{
     width: 100%;
-    height: auto;
 }
 
-.head__menu--back{
+.head__menu__back{
     padding: 0em 0em 1.5em 1em;
     position: absolute;
     margin-top: -3.5em;
@@ -322,10 +408,9 @@ a{
 /* MENU PART.2 */
 
 .container{
-    width: 80%;
-    background: #F5F5F5;
+    width: 100%;
+    background: var(--fond_B);
     border-radius: 3em 3em 0em 0em;
-    margin: auto;
     z-index: 1;
     margin-top: -3em;
     padding: 1.5em 0em 3em 0em;
@@ -333,83 +418,202 @@ a{
     flex-direction: column;
 }
 
-.container--title{
+.container__title{
     font-family: 'Shrikhand', cursive;
     font-size: 1.3em;
     padding: 0em 0em 0em 1em;
     margin-top: 0em;
 }
 
-.container--heart{
-    align-self: flex-end;
-    margin-top: -2.8em;
-    padding: 0em 2em 0em 0em;
-    font-size: 1em;
-    margin-left: 1em;
-}
-
-.container__menu--service{
+.container__menu__service{
     font-weight: 300;
     font-size: 0.9em;
     padding: 2em 0em 0em 1.3em;
 }
 
-.container__menu--separator{
+.container__menu__separator{
     height: 2.2px;
     width: 2.2em;
     margin-left: 1.2em;
     margin-top: -0.8em;
 	border: none;
 	box-shadow: none;
-	background-color: #99E2D0;
+	background-color: var(--tertiaire);
 }
 
-.container__menu--check{
-    background: #ffffff;
+.container__menu__check{
+    background: var(--fond_A);
     border-radius: 0.8rem;
-    box-shadow: 0px 1px 5px #BDBDBD;
+    box-shadow: 0px 1px 5px var(--bs_A);
     margin: 1em;
     padding: 0.5em;
     font-size: 0.9em;
+    transition: transform ease-in-out 0.5s;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
 }
 
-.container__menu--title{
+.container__menu__title{
     font-weight: 500;
     font-size: 1em;
     margin-left: 0em;
     margin-top: 0em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
-.container__menu--txt{
+.container__menu__txt{
     font-weight: 300;
     font-size: 0.8em;
     margin-left: 0em;
     margin-top: -1em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
-.container__menu--price{
+.container__menu__price{
     margin-top: -2em;
     font-size: 0.9em;
     font-weight: 500;
     display: flex;
     justify-content: flex-end;
+    transition: .5s;
 }
 
-.container--button{
+.container__button{
     background-image: linear-gradient(350deg, #9356DC, #FF79DA);
     width: 14em;
     align-self: center;
     border: none;
-    color: #ffffff;
+    color: var(--fond_A);
     padding: 1rem;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    font-size: 1em;
     margin-top: 2em;
     border-radius: 2rem;
-    box-shadow: 0px 0px 18px #BDBDBD;
+    box-shadow: 0px 0px 18px var(--bs_A);
+    cursor: pointer;
+}
+
+.container__button:hover{
+    background-image: linear-gradient(350deg, #b07af1, #f890db);
+    box-shadow: 0px 0px 25px var(--bs_B);
+}
+
+/* MENU PART.2 ANIM HEART */
+
+.heart__menu__anim{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -2.8em;
+    margin-right: 1em;
+}
+
+.heart__menu__anim .heart__menu__anim__icon{
+    width: 25px;
+    cursor: pointer;
+}
+
+.heart__menu__anim .heart__menu__anim__icon path{
+    fill: #ffffff;
+    stroke-width: 25;
+    stroke: black;
+}
+
+.heart__menu__anim .heart__menu__anim__icon path{
+    stroke-dasharray: 1580;
+    stroke-dashoffset: 0;
+}
+
+.heart__menu__anim .heart__menu__anim__icon:hover path{
+    animation: animate-heart 0.8s linear forwards;
+    stroke: var(--primaire);
+}
+
+@keyframes animate-heart{
+    0%{
+        stroke-dashoffset: 0;
+        fill: #ede4f8;
+    }
+    40%{
+        stroke-dashoffset: 1580;
+    }
+    80%{
+        stroke-dashoffset: 3160;
+    }
+    100%{
+        stroke-dashoffset: 3160;
+        fill: var(--primaire);
+    }
+}
+
+
+/* MENU PART.2 ANIM PLATS */
+
+.container__menu__check {
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+        margin-top: 2em;
+    }
+    100%{
+        opacity: 1;
+        margin-top: 1em;
+    }
+}
+
+
+/* MENU PART.2 ANIM CHECK */
+
+.back_check{
+    width: 50px;
+    height: 54px;
+    background-color: var(--tertiaire);
+    margin-top: -3.25em;
+    position: absolute;
+    border-radius: 0em 0.8em 0.8em 0em;
+    display: flex;
+    justify-content: center;
+    transition: 0.5s;
+    right: -50px;
+}
+
+.container__menu__check:hover .back_check{
+    transition: 0.5s;
+    right: 0px;
+}
+
+.check{
+    color: var(--tertiaire);
+    border-radius: 50%;
+    padding: 0.4em;
+    font-size: 10px;
+    background: var(--fond_A);
+    align-self: center;
+}
+
+.container__menu__check:hover .check{
+    transform: rotate(360deg);
+    transition: 0.7s;
+}
+
+.container__menu__check:hover .container__menu__price{
+    transition: .5s;
+    margin-right: 50px;
+}
+
+.div__txt{
+    width: 90%;
+}
+
+.container__menu__check:hover .div__txt{
+    width: 65%;
 }
 
 
@@ -419,9 +623,17 @@ a{
     body{
         max-width: 1200px;
     }
+
+    .loader_bg{
+        width: 1200px;
+    }
+
+    .loader{
+        font-size: 5em;
+    }
     
     .mode{
-        width: 80%;
+        width: 100%;
         margin: auto;
         display: flex;
         flex-wrap: wrap;
@@ -438,7 +650,7 @@ a{
         flex: 2;
     }
 
-    .mode__fonction--txt{
+    .mode__fonction__txt{
         font-size: 1.1em;
     }
 
@@ -449,9 +661,9 @@ a{
         justify-content: center;
     }
     
-    .resto__menu--pict{
-        max-width: 600px;
-        width: auto;
+    .resto__menu__pict{
+        max-width: 800px;
+        max-height: 400px;
         flex: 2;
         border-radius: 1em 0em 0em 1em;
     }
@@ -462,29 +674,26 @@ a{
         width: auto;
     }
 
-    .resto__menu__description--txt{
+    .resto__menu__description__txt{
         font-size: 1.5em;
         margin-top: 0.5em;
     }
 
-    .heart__icon__anim{
+    .resto__menu__anim{
         font-size: 1.5em;
         align-self: flex-end;
         margin-bottom: 1em;
     }
 
+    .resto__menu__new{
+        font-size: 0.8em;
+    }
+
     .container{
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin-top: -15em;
+        margin-top: -7em;
     }
 
-    .heart_menu{
-        margin-left: 55em;
-        padding-top: -10em;
-    }
-
-    .container__menu--check{
+    .container__menu__check{
         width: 250px;
     }
 
@@ -493,7 +702,7 @@ a{
         margin: auto;
     }
 
-    .container--button{
+    .container__button{
         margin: auto;
         margin-top: 2em;
     }

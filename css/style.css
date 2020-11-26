@@ -326,12 +326,13 @@ a{
 .resto__menu__anim .resto__menu__anim__icon path{
     fill: #ffffff;
     stroke-width: 25;
-    stroke: var(--primaire);
+    stroke: black;
     stroke-dasharray: 1580;
 }
 
 .resto__menu__anim .resto__menu__anim__icon:hover path{
     animation: animate-heart 0.8s linear forwards;
+    stroke: var(--primaire);
 }
 
 @keyframes animate-heart{
@@ -519,7 +520,7 @@ a{
 .heart__menu__anim .heart__menu__anim__icon path{
     fill: #ffffff;
     stroke-width: 25;
-    stroke: var(--primaire);
+    stroke: black;
 }
 
 .heart__menu__anim .heart__menu__anim__icon path{
@@ -529,6 +530,7 @@ a{
 
 .heart__menu__anim .heart__menu__anim__icon:hover path{
     animation: animate-heart 0.8s linear forwards;
+    stroke: var(--primaire);
 }
 
 @keyframes animate-heart{
@@ -607,7 +609,7 @@ a{
 }
 
 .div__txt{
-    width: 100%;
+    width: 90%;
 }
 
 .container__menu__check:hover .div__txt{
